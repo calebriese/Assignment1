@@ -1,0 +1,9 @@
+# Project exclude paths
+/cmake-build-debug/
+.idea/.name
+.idea/CS4280-P0.iml
+.idea/vcs.xml        
+CMakeLists.txt
+.idea/
+
+
