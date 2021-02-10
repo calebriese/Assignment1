@@ -1,5 +1,7 @@
 # Assignment1
-Your README file should consist, at a minimum, of a description of how I should compile and run your project, any outstanding problems that it still has, and any problems you encountered.
 
+Compile: run the command "make"
 
-The goal of this homework is to become familiar with the environment in hoare while practising system calls. You will also demonstrate your proficiency in the use of perror and getopt in this submission.
+Clean: run the command "clean"
+
+Problems Encountered: Mostly the problems I encountered were not knowing enough about C and system calls, I learned ALOT during this project and it was very enjoyable. I resubmitted passed the deadline because in one of your lectures I remember you saying as long as it's in before 6am/7am when you start grading then its fine.
