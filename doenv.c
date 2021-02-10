@@ -17,11 +17,14 @@ int main(int argc, char * argv[], char ** environ)
     {
         for (int i = 0; environ[i] != NULL; i++)
         {
-            char envVar[1028];
-            const char x[2] = "=";
-            strcpy(envVar, environ[i]);
-            strtok(envVar, x);
-            printf("%s = %s\n", envVar, getenv(envVar));
+//            char envVar[1028];
+//            const char x[2] = "=";
+//            strcpy(envVar, environ[i]);
+//            strtok(envVar, x);
+//            printf("%s = %s\n", envVar, getenv(envVar));
+
+
+            printf("%s\n", environ[i]);
         }
     }
     while ((opt = getopt (argc, argv, ":i:h")) != -1) //Arguments passed, process them and perror if wrong
