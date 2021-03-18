@@ -1,9 +1,9 @@
 # Linux System Calls and Library Functions
-To Compile: run the command,
+To compile run the command:
 ```
 make
 ```
-To Clean: run the command,
+To clean run the command:
 ```
 make clean
 ```
