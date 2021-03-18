@@ -30,8 +30,10 @@ Check the man page for env(1) for a description of the utility.
 6. Note that it is not safe to just append new entries to the old environ, since you cannot expand the old environ array with realloc(3). if all name=value pairs correspond to entries already in the environment, just replace the corresponding pointers in environ.
 ## Invoking the solution
 Your solution will be invoked using the following command:
+```
 doenv [h]
 doenv [-i] [var1=value] [var2=value] [...] {command1 [; command2] [; ...]}
+```
 With the use of perror, I’ll like some meaningful error messages. The format for error messages should be: doenv: Error: Detailed error message
 where doenv is actually the name of the executable (argv[0]) and should be appropriately modified if the name of executable is changed without a need to recompile the source.
 It is required for this project that you use version control, a Makefile, and a README. Your README file should consist, at a minimum, of a description of how I should compile and run your project, any outstanding problems that it still has, and any problems you encountered. Your Makefile should use suffix-rules or pattern-rules and have an option to clean up object files.
