@@ -1,18 +1,12 @@
 # Linux System Calls and Library Functions
-
-> Compile: run the command,
+To Compile: run the command,
 ```
 make
 ```
-
-> Clean: run the command,
+To Clean: run the command,
 ```
 make clean
 ```
-
-Problems Encountered: Mostly the problems I encountered were not knowing enough about C and system calls, I learned ALOT during this project and it was very enjoyable. I resubmitted passed the deadline because in one of your lectures I remember you saying as long as it's in before 6am/7am when you start grading then its fine.
-
-
 ## Purpose
 The goal of this homework is to become familiar with the environment in hoare while practising system calls. You will also demonstrate your proficiency in the use of perror and getopt in this submission. This is Exercise 2.12 (p. 54-55) in your text by Robbins/Robbins.
 The env utility examines the environment and modifies it to execute another command. When called without arguments, the env command writes the current environment to standard output. The optional utility argument specifies the command to be executed under the modified environment. The optional -i argument means that env should ignore the environment inherited from the shell when exeucting utility. Without the -i option, env uses the [name=value] arguments to modify rather than replace the current environment to execute utility. The env utility does not modify the environment of the shell that executes it. The behavior of the command is illustrated below:
@@ -25,7 +19,6 @@ $ date
 Mon Jan 25 21:56:31 CST 2021
 $
 ```
-
 ## Task
 Problem: Write a program called doenv that behaves in the same way as the env utility when executing another program.
 Check the man page for env(1) for a description of the utility.
@@ -35,7 +28,6 @@ Check the man page for env(1) for a description of the utility.
 4. One way to change the current environment in a program is to overwrite the value of the environ external variable. If you are completely replacing the external environment (-i option), count the number of name=value pairs, allocate enough space for the argument array (don’t forget the extra NULL entry), copy the pointers from argv into the array, and set environ.
 5. If you are modifying the current environment by overwriting environ, allocate enough space to hold the old entries and any new entries to be added. Copy the pointers from the old environ into the new one. For each name=value pair, determine whether the name is already in the old environment. If name appears, just replace the pointer. Otherwise, add the new entry to the array.
 6. Note that it is not safe to just append new entries to the old environ, since you cannot expand the old environ array with realloc(3). if all name=value pairs correspond to entries already in the environment, just replace the corresponding pointers in environ.
-
 ## Invoking the solution
 Your solution will be invoked using the following command:
 doenv [h]
